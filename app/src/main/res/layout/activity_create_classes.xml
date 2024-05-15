@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateClassesActivity"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/txtview4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresar los siguientes datos para crear una clase/actividad:"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/edtNombreClase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre unico de la clase:"
+        app:layout_constraintTop_toBottomOf="@+id/txtview4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewProf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escoge el profesor de la clase:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreClase"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/spinnerNombreProfesor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewProf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="5dp"
+        />
+
+
+
+    <EditText
+        android:id="@+id/edtLugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Lugar:"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNombreProfesor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edtCupos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cupos:"
+        app:layout_constraintTop_toBottomOf="@+id/edtLugar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edtDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dia de la Semana:"
+        app:layout_constraintTop_toBottomOf="@id/edtCupos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtview6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresar la hora de inicio y fin de la clase respectivamente."
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtDia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:id="@+id/Llayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtview6"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Hora inicio: "
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtHoraInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="10:15 am" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="Hora fin: "
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtHoraFin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="11:30 am" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/txtview7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresar la edad minima y maxima de la clase (años)."
+        android:layout_marginBottom="1.dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/Llayout1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/Llayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtview7"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Edad minima: "
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtEdadMinima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="5          " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="Edad maxima: "
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtEdadMaxima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="10" />
+    </LinearLayout>
+    
+
+    <Button
+        android:id="@+id/btnCrearClase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear Clase"
+        app:layout_constraintTop_toBottomOf="@id/Llayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminDataActivity">
+
+    <TextView
+        android:id="@+id/txtView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aqui puedes subir el horario personal de cada administrador y hacer tutor"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewHorarioPersonal"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/txtView17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/btnSeleccionarImagenPersonal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Seleccionar Imagen Personal"
+        app:layout_constraintTop_toBottomOf="@id/imageViewHorarioPersonal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnSubirImagenPersonal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Subir Imagen Personal"
+        app:layout_constraintTop_toBottomOf="@id/btnSeleccionarImagenPersonal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

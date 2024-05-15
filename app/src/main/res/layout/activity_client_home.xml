@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientHomeActivity">
+
+    <TextView
+        android:id="@+id/txtViewBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenida"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnVerClasesCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver clases disponibles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtViewBienvenida"
+        />
+
+    <Button
+        android:id="@+id/btnAgregarHijos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar hijos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnVerClasesCliente"
+        />
+
+    <Button
+        android:id="@+id/btnVerEliminarHijos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver/Eliminar hijos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAgregarHijos"
+        />
+    
+    <Button
+        android:id="@+id/btnInscripciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inscripciones"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerEliminarHijos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnVerEliminarInscripciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver/Eliminar Inscripciones"
+        app:layout_constraintTop_toBottomOf="@+id/btnInscripciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacto"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerEliminarInscripciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    
+    
+    
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

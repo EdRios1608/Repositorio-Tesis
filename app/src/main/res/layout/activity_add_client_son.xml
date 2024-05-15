@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddClientSonActivity"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/txtview9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresa la informacion de tu hijo."
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <EditText
+        android:id="@+id/edtNombreHijo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre: "
+        app:layout_constraintTop_toBottomOf="@id/txtview9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/edtApellidoHijo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellido: "
+        app:layout_constraintTop_toBottomOf="@id/edtNombreHijo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/Llayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/edtApellidoHijo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/edtFechaNacimientoHijo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de nacimiento: "
+            android:clickable="false"
+            android:focusable="false"
+            />
+
+        <EditText
+            android:id="@+id/edtEdadHijo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Edad"
+            android:clickable="false"
+            android:focusable="false"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGuardarHijo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar hijo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Llayout3"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

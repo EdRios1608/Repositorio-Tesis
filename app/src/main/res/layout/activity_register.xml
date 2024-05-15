@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity"
+    >
+
+    <TextView
+        android:id="@+id/txtView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COMENCEMOS!"
+        />
+
+    <EditText
+        android:id="@+id/edtNombreRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+
+        />
+
+    <EditText
+        android:id="@+id/edtApellidoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellido"
+        />
+
+
+    <EditText
+        android:id="@+id/edtEmailRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Correo Electronico"
+        />
+
+    <EditText
+        android:id="@+id/edtPasswordRegister1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Contrasena"
+        />
+
+    <EditText
+        android:id="@+id/edtPasswordRegister2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Repetir contrasena"
+        />
+
+    <EditText
+        android:id="@+id/edtTelefonoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefono"
+        />
+
+    <EditText
+        android:id="@+id/edtCedulaRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cedula"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Escoge tu club:"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnRegistrarUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        />
+
+
+
+</LinearLayout>

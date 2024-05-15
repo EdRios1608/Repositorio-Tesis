@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SuperAdminHomeActivity">
+
+    <TextView
+        android:id="@+id/txtviewAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SuperAdministrador"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <Button
+        android:id="@+id/btnHacerAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hacer admin"
+        app:layout_constraintTop_toBottomOf="@id/txtviewAdmin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnActividades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Administrar Actividades"
+        app:layout_constraintTop_toBottomOf="@id/btnHacerAdmin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnAdministradores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Administradores"
+        app:layout_constraintTop_toBottomOf="@id/btnActividades"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnImagenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imagenes"
+        app:layout_constraintTop_toBottomOf="@id/btnAdministradores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
