@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+
+//Adaptador para las inscripciones de los hijos
 class InscriptionsAdapter(private var hijoListXClases: ArrayList<Hijo>, private val context: Context, private val userEmail: String): RecyclerView.Adapter<InscriptionsAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InscriptionsAdapter.MyViewHolder {

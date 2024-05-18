@@ -3,8 +3,7 @@ package com.example.ex3
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
-//ir poniendo mas cosas
-
+//parcelice y parcelable ayuda a que los datos de esta clase puedan pasar por los activities
 @Parcelize
 data class Classes(var nombreClase: String = "",
                    var nombreProfesor: String = "",

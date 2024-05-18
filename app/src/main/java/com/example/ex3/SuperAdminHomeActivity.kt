@@ -12,6 +12,7 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 
+//Home de super administrador
 @Suppress("DEPRECATION")
 class SuperAdminHomeActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth

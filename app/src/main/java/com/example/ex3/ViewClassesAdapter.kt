@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+//Adaptador que muestra las clases
 class ViewClassesAdapter(private val classList : ArrayList<Classes>) : RecyclerView.Adapter<ViewClassesAdapter.MyViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewClassesAdapter.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.class_item,
@@ -40,6 +41,7 @@ class ViewClassesAdapter(private val classList : ArrayList<Classes>) : RecyclerV
     }
 
     public class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+        //Variables
         val nombreClase : TextView = itemView.findViewById(R.id.txtViewNombreClase)
         val nombreProfesor : TextView = itemView.findViewById(R.id.txtViewNombreProfesor)
         val lugar : TextView = itemView.findViewById(R.id.txtViewLugar)

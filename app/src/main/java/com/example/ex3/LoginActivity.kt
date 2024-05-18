@@ -16,8 +16,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FirebaseFirestore
 
-
+//Activity Login
 class LoginActivity : AppCompatActivity() {
+    //Varialbes
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
 
@@ -52,6 +53,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    //Funcion para ingresar a la sesion de un usuario
     private fun signIn(email: String, password: String) {
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->

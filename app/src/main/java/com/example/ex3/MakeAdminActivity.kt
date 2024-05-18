@@ -11,8 +11,10 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.QuerySnapshot
 
+//Activity que permite hacer nuevos administradores
 class MakeAdminActivity : AppCompatActivity() {
 
+    //Variables
     private lateinit var db: FirebaseFirestore
     private lateinit var userRecyclerView: RecyclerView
     private lateinit var userArrayList : ArrayList<User>
@@ -35,6 +37,7 @@ class MakeAdminActivity : AppCompatActivity() {
 
     }
 
+    //Funcion que obtiene la informacion de los usuarios de la base de datos
     private fun getUserData(){
         db = FirebaseFirestore.getInstance()
         db.collection("usuarios").

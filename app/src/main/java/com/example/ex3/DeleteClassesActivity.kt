@@ -11,8 +11,10 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.QuerySnapshot
 
+//Clase que elimina la informacion de las clases y todas sus referencias
 class DeleteClassesActivity : AppCompatActivity() {
 
+    //Variables
     private lateinit var db: FirebaseFirestore
     private lateinit var classesDeleteRecyclerView: RecyclerView
     private lateinit var classesDeleteArrayList : ArrayList<Classes>
@@ -34,6 +36,7 @@ class DeleteClassesActivity : AppCompatActivity() {
         getData()
     }
 
+    //Muestra la informacion de las clases obteniendo de la base de datos.
     private fun getData(){
         db = FirebaseFirestore.getInstance()
         db.collection("clases").

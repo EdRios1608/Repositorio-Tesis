@@ -9,7 +9,10 @@ import android.widget.Spinner
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 
+//Clase que sirve para crear distintas actividades del centro vacacional
 class CreateClassesActivity : AppCompatActivity() {
+
+    //Definicion de variables
     private lateinit var db: FirebaseFirestore
     private lateinit var spinnerNombreProfesor: Spinner
     private lateinit var adapterProfesores: ArrayAdapter<String>
@@ -74,11 +77,13 @@ class CreateClassesActivity : AppCompatActivity() {
         }
     }
 
+    //Validacion de campos
     private fun validarCampos(nombreClase: String, lugar: String, cupos: Int?, dia: String, horaInicio: String, horaFin: String, edadMinima: Int?, edadMaxima: Int?): Boolean {
         return !(nombreClase.isEmpty() || lugar.isEmpty() || cupos == null || dia.isEmpty() || horaInicio.isEmpty() || horaFin.isEmpty() || edadMinima == null || edadMaxima == null)
     }
 
 
+    //Funcion para crear la clase
     private fun createClass(nuevaClase: Classes) {
         val selectedPosition = spinnerNombreProfesor.selectedItemPosition
         val profesorEmail = profesorEmails[selectedPosition]  // Obtén el email del profesor seleccionado
@@ -103,6 +108,7 @@ class CreateClassesActivity : AppCompatActivity() {
             }
     }
 
+    //Funcion para agregar la clase al proefsor
     private fun updateProfesorClasses(profesorEmail: String, claseAsignada: String) {
         val userRef = db.collection("usuarios").document(profesorEmail)
         db.runTransaction { transaction ->
@@ -118,7 +124,7 @@ class CreateClassesActivity : AppCompatActivity() {
     }
 
 
-
+    //Funcion para mostrar los administradores
     private fun loadProfesores() {
         db.collection("usuarios").whereEqualTo("rango", 1)
             .get()

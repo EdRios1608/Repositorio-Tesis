@@ -9,9 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-
+// Clase para la actividad de ver clases disponibles para los hijos
 class AvailableClassesActivity : AppCompatActivity() {
 
+    //Definicion de variables
     private lateinit var db: FirebaseFirestore
     private lateinit var availableClasesRecyclerView: RecyclerView
     private lateinit var availableClasesArrayList : ArrayList<Classes>
@@ -51,10 +52,9 @@ class AvailableClassesActivity : AppCompatActivity() {
     }
 
 
+    //Funcion para obtener las clases disponibles para los hijos en base a su edad y se filtran las clases
     private fun getData(edadHijo: Int) {
         db = FirebaseFirestore.getInstance()
-
-        // Asumiendo que 'edadHijo' es la edad del hijo y quieres filtrar clases que sean adecuadas para su edad
         db.collection("clases")
             .addSnapshotListener { snapshots, e ->
                 if (e != null) {
@@ -65,7 +65,6 @@ class AvailableClassesActivity : AppCompatActivity() {
                 val filteredClasesList = ArrayList<Classes>()
                 for (doc in snapshots!!.documents) {
                     val clase = doc.toObject(Classes::class.java)
-                    // Verifica si la clase cumple con el rango de edad del hijo
                     if (clase != null && clase.edadMinima <= edadHijo && clase.edadMaxima >= edadHijo) {
                         filteredClasesList.add(clase)
                     }

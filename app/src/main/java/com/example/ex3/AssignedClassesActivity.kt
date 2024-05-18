@@ -9,10 +9,11 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class AssignedClassesActivity : AppCompatActivity() {
 
+    //Declaracion de variables.
     private lateinit var db: FirebaseFirestore
     private lateinit var assignedClassesRecyclerView: RecyclerView
-    private lateinit var assignedClassesArrayList: ArrayList<Classes>  // This list will store the actual Classes objects
-    private lateinit var assignedClassNames: ArrayList<String>         // This list will hold the names of the assigned classes
+    private lateinit var assignedClassesArrayList: ArrayList<Classes>
+    private lateinit var assignedClassNames: ArrayList<String>
     private lateinit var myAdapter: AssignedClassesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class AssignedClassesActivity : AppCompatActivity() {
 
         db = FirebaseFirestore.getInstance()
 
-        // Retrieve the names of the assigned classes from the intent
+        // Muestras las clases asignadas
         assignedClassNames = intent.getStringArrayListExtra("clasesAsignadas") ?: arrayListOf()
 
         assignedClassesRecyclerView = findViewById(R.id.assignedClassesRecyclerView)
@@ -32,7 +33,7 @@ class AssignedClassesActivity : AppCompatActivity() {
         myAdapter = AssignedClassesAdapter(assignedClassesArrayList,this)
         assignedClassesRecyclerView.adapter = myAdapter
 
-        // Load the assigned classes if there are names in the list
+        // Funcion para cargar las clases asignadas.
         loadAssignedClasses()
     }
 

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
+//Adaptador que muestra la informacion del hijo que va a ser borrada.
 class ViewDeleteHijosAdapter(private val hijoList: ArrayList<Hijo>, private val context: Context, private val userEmail: String): RecyclerView.Adapter<ViewDeleteHijosAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewDeleteHijosAdapter.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.view_delete_hijo, parent, false)
@@ -34,6 +35,7 @@ class ViewDeleteHijosAdapter(private val hijoList: ArrayList<Hijo>, private val 
     }
 
 
+    //Funcion que maneja toda la informacion del hijo que va a ser borrada
     private fun eliminarHijo(userEmail: String, hijo: Hijo, position: Int) {
         val db = FirebaseFirestore.getInstance()
         val userHijosRef = db.collection("usuarios").document(userEmail).collection("hijos").document(hijo.nombre)

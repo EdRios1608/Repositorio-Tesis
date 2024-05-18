@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.ex3.R.layout.activity_home
 
+//Activity Home de la aplicacion.
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

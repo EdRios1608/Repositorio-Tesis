@@ -12,6 +12,7 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 
+//Funcion para mostrar el home del cliente con toda su funcionalidad
 @Suppress("DEPRECATION")
 class ClientHomeActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
@@ -21,6 +22,7 @@ class ClientHomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_client_home)
         firebaseAuth = Firebase.auth
 
+        //conexion con lo visual
         val btnVerClasesCliente = findViewById<Button>(R.id.btnVerClasesCliente)
         val btnAgregarHijos = findViewById<Button>(R.id.btnAgregarHijos)
         val btnVerEliminarHijos = findViewById<Button>(R.id.btnVerEliminarHijos)
@@ -70,8 +72,6 @@ class ClientHomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -79,6 +79,7 @@ class ClientHomeActivity : AppCompatActivity() {
         return true
     }
 
+    //Menu superior derecha, para cerrar sesion
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.menu_salir -> {

@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 
+//Adaptador para hacer nuevos adminsitadores
 class MakeAdminAdapter(private val userList: ArrayList<User>, private val db: FirebaseFirestore) : RecyclerView.Adapter<MakeAdminAdapter.MyViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -30,6 +31,7 @@ class MakeAdminAdapter(private val userList: ArrayList<User>, private val db: Fi
         holder.switch.setOnCheckedChangeListener(null)
         holder.switch.isChecked = currentItem.rango == 1
 
+        //Switch
         // Vincular de nuevo el listener
         holder.switch.setOnCheckedChangeListener { _, isChecked ->
             // Actualizar el rango basado en el estado del switch

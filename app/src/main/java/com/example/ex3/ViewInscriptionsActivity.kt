@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FieldPath
 import com.google.firebase.firestore.FirebaseFirestore
 
+//Activity que muestra las incripciones disponibles para los hijos del usuario
 class ViewInscriptionsActivity : AppCompatActivity() {
 
+    //Variables
     private lateinit var db: FirebaseFirestore
     private lateinit var inscripcionesXHijoRecyclerView: RecyclerView
     private lateinit var inscripcionesXHijoArrayList : ArrayList<Classes>

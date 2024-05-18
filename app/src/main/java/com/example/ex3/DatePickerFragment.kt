@@ -8,6 +8,7 @@ import android.widget.DatePicker
 import androidx.fragment.app.DialogFragment
 import java.util.Calendar
 
+//Fragmento que muestra el calendario para que el usuario ingrese la fecha de nacimiento del hijo.
 class DatePickerFragment (val listener :(day: Int, month: Int, year: Int) -> Unit):DialogFragment(),
     DatePickerDialog.OnDateSetListener {
 

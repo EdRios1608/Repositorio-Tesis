@@ -4,6 +4,7 @@ package com.example.ex3
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
+//Clase user, informacion importante que se usara a lo largo de la aplicacion
 @Parcelize
 data class User(
     var nombre: String = "",

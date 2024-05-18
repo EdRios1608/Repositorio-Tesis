@@ -10,6 +10,7 @@ import android.widget.TextView
 
 import androidx.recyclerview.widget.RecyclerView
 
+//Definicion del adaptador para las clases asignadas del usuario
 class AssignedClassesAdapter(private val assignedClasses: ArrayList<Classes>, private val context: Context) : RecyclerView.Adapter<AssignedClassesAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AssignedClassesAdapter.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.assigned_class, parent, false)
@@ -20,6 +21,7 @@ class AssignedClassesAdapter(private val assignedClasses: ArrayList<Classes>, pr
     override fun onBindViewHolder(holder: AssignedClassesAdapter.MyViewHolder, position: Int) {
         val claseAsignada : Classes = assignedClasses[position]
 
+        //Conexion con lo visual y lo programatico
         holder.nombreClaseAsignada.text = claseAsignada.nombreClase
         holder.diaClaseAsignada.text = claseAsignada.dia
         holder.lugarClaseAsignada.text = claseAsignada.lugar
@@ -34,9 +36,6 @@ class AssignedClassesAdapter(private val assignedClasses: ArrayList<Classes>, pr
             context.startActivity(intent)
         }
 
-
-
-
     }
 
     override fun getItemCount(): Int {
@@ -44,6 +43,7 @@ class AssignedClassesAdapter(private val assignedClasses: ArrayList<Classes>, pr
     }
 
     public class MyViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
+        //Conexion con lo visual
         val nombreClaseAsignada : TextView = itemView.findViewById(R.id.txtViewNombreClaseAsignada)
         val diaClaseAsignada : TextView = itemView.findViewById(R.id.txtViewDiaClaseAsignada)
         val lugarClaseAsignada : TextView = itemView.findViewById(R.id.txtViewLugarClaseAsignada)

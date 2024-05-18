@@ -18,6 +18,7 @@ import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import android.util.Log
 
+//Actividad de registro
 class RegisterActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var clubUsuario: String

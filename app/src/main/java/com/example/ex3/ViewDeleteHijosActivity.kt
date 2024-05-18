@@ -10,8 +10,10 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.QuerySnapshot
 
+//Actividad que elimina la informacion de los hijos y sus referencias
 class ViewDeleteHijosActivity : AppCompatActivity() {
 
+    //Variables
     private lateinit var db: FirebaseFirestore
     private lateinit var hijosRecyclerView: RecyclerView
     private lateinit var hijosArrayList : ArrayList<Hijo>
@@ -22,7 +24,6 @@ class ViewDeleteHijosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_delete_hijos)
 
         val userEmail = intent.getStringExtra("userEmail")
-
 
         hijosRecyclerView = findViewById(R.id.recyclerViewVerEliminarHijos)
         hijosRecyclerView.layoutManager = LinearLayoutManager(this)

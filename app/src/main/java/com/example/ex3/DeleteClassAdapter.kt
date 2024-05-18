@@ -14,7 +14,7 @@ import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-
+//Adaptador qye sirve para mostrar las clases que el usuario puede eliminar
 class DeleteClassAdapter(private val classList : ArrayList<Classes>, private val context: Context) : RecyclerView.Adapter<DeleteClassAdapter.MyViewHolder>() {
 
     private val db = FirebaseFirestore.getInstance()

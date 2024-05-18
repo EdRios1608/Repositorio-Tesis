@@ -2,6 +2,7 @@ package com.example.ex3
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
+//Clase Hijo que guarda la infromacion importante del hijo.
 @Parcelize
 data class Hijo(
     var nombre: String= "",

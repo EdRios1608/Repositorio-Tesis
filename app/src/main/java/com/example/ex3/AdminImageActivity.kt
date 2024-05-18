@@ -10,6 +10,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class AdminImageActivity : AppCompatActivity() {
 
+    //Declaracion de variable
     private lateinit var adminEmail: String
 
 
@@ -21,6 +22,7 @@ class AdminImageActivity : AppCompatActivity() {
         adminEmail = intent.getStringExtra("adminEmail") ?: ""
 
 
+        //Conexion con los botones
         val btnVerImagenAdmin1 = findViewById<Button>(R.id.btnVerImagenAdmin1)
         val btnVerImagenAdmin2 = findViewById<Button>(R.id.btnVerImagenAdmin2)
         val btnVerImagenAdmin3 = findViewById<Button>(R.id.btnVerImagenAdmin3)
@@ -74,6 +76,7 @@ class AdminImageActivity : AppCompatActivity() {
 
     }
 
+    //Cargar imagen
     private fun loadImageIntoView(url: String, imageView: ImageView) {
         Glide.with(this)
             .load(url)

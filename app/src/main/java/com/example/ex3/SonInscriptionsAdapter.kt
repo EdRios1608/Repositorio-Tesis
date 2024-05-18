@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+//Adaptador para mostrar las clases de los hijos
 class SonInscriptionsAdapter(private val inscriptionsXHijo: ArrayList<Hijo>, private val context: Context, private val userEmail: String): RecyclerView.Adapter<SonInscriptionsAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SonInscriptionsAdapter.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.view_inscriptions, parent, false)

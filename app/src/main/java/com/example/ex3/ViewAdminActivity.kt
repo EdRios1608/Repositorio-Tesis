@@ -12,6 +12,7 @@ import com.google.firebase.firestore.EventListener
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.QuerySnapshot
 
+//Actividad que muestra la informacion de todos los administradore
 class ViewAdminActivity : AppCompatActivity() {
 
     private lateinit var db: FirebaseFirestore

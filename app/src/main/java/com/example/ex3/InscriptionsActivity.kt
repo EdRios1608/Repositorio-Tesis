@@ -10,8 +10,10 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.QuerySnapshot
 
+//Clase que maneja las inscripciones de los hijos
 class InscriptionsActivity : AppCompatActivity() {
 
+    //Variables
     private lateinit var db: FirebaseFirestore
     private lateinit var hijosXClasesRecyclerView: RecyclerView
     private lateinit var hijosXClasesArrayList : ArrayList<Hijo>

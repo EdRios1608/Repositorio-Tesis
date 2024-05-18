@@ -13,6 +13,7 @@ import com.google.firebase.auth.auth
 
 class AdminHomeActivity : AppCompatActivity() {
 
+    //Declaracion de variables
     private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,10 +25,12 @@ class AdminHomeActivity : AppCompatActivity() {
         val user = intent.getParcelableExtra<User>("userDetails") ?: User()
 
 
+        //Coneccion con lo visual
         val btnVerClasesVistaAdmin = findViewById<Button>(R.id.btnVerClasesVistaAdmin)
         val btnVerHorarios = findViewById<Button>(R.id.btnVerHorarios)
         val btnVerClasesAsignadas = findViewById<Button>(R.id.btnVerClasesAsiganadas)
 
+        //botones y las distintas funcionalidades
         btnVerClasesVistaAdmin.setOnClickListener(){
             val intent = Intent(this, ViewClassesActivity::class.java)
             startActivity(intent)
@@ -51,6 +54,7 @@ class AdminHomeActivity : AppCompatActivity() {
 
     }
 
+    //Funciones
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.navtop_menu,menu)
         return true

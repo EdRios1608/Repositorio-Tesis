@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
+// Adaptador para mostrar la informacion de las clases en base a la edad del hijo
 class AvailableClassesAdapter(
     private val clasesDisponiblesList: ArrayList<Classes>,
     private val context: Context,
@@ -37,10 +38,10 @@ class AvailableClassesAdapter(
         holder.cuposClasesDisponibles.text = clase.cupos.toString()
         holder.cuposRestantesClasesDisponibles.text = clase.cuposRestantes.toString()
 
-        // Asegurarse de que la lista de clases inscritas es mutable
         val clasesInscritas = hijo.clasesInscritas.toMutableList()
 
 
+        //funcion para mostrar las clases, en el caso de que este inscrito, no podra aplastar el boton y viceversa.
         if (clasesInscritas.contains(clase.nombreClase) || clase.cuposRestantes <= 0) {
             holder.btnInscribirHijo.text = "Completo/Inscrito"
             holder.btnInscribirHijo.isEnabled = false
@@ -73,6 +74,9 @@ class AvailableClassesAdapter(
 
         val btnInscribirHijo: Button = itemView.findViewById(R.id.btnInscribirHijo)
     }
+
+    //Funciones importates para agregar todos los datos necesarios a distintas partes.
+    //Estas referencias seran usadas para poder actualizar los datos correctamente.
 
     private fun agregarClaseAHijo(userEmail: String, nombreHijo: String, nombreClase: String) {
         db.collection("usuarios").document(userEmail).collection("hijos").document(nombreHijo)

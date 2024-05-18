@@ -19,8 +19,10 @@ import com.google.firebase.storage.StorageReference
 import java.lang.Exception
 import java.util.UUID
 
+//Clase que maneja las imagenes
 class ImagesActivity : AppCompatActivity() {
 
+    //Variables
     lateinit var btnSeleccionarImagen1 : Button
     lateinit var btnSubirImagen1 : Button
 
@@ -66,8 +68,7 @@ class ImagesActivity : AppCompatActivity() {
 
     }
 
-
-
+    //Funcion que selecciona la imagen de galeria.
     private fun selectImage(requestCode: Int) {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
@@ -90,6 +91,7 @@ class ImagesActivity : AppCompatActivity() {
         }
     }
 
+    //Funcion para guardar la imagen en firebase
     private fun uploadImage(fileUri: Uri, imageKey: String) {
         val progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Subiendo $imageKey...")

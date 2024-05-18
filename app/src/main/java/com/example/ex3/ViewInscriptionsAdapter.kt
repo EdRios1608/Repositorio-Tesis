@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
+//Adaptador que muestra la informacion de las clases disponibles para los hijos.
 class ViewInscriptionsAdapter(private val clasesInscritasXHijo: ArrayList<Classes>, private val context: Context, private val userEmail: String, private val nombreHijo: String): RecyclerView.Adapter<ViewInscriptionsAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewInscriptionsAdapter.MyViewHolder {
@@ -27,8 +28,6 @@ class ViewInscriptionsAdapter(private val clasesInscritasXHijo: ArrayList<Classe
         holder.diaClase.text = claseInscrita.dia
         holder.horaInicio.text = claseInscrita.horaInicio
         holder.horaFin.text = claseInscrita.horaFin
-
-
 
         holder.btnEliminarInscripcionHijo.setOnClickListener {
             eliminarInscripcion(position, userEmail, nombreHijo)

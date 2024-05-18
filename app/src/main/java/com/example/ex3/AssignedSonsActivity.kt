@@ -9,6 +9,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class AssignedSonsActivity : AppCompatActivity() {
 
+    //Definicion de variables
     private lateinit var db: FirebaseFirestore
     private lateinit var recyclerViewHijosAsignados: RecyclerView
     private lateinit var arrayListHijosAsignados: ArrayList<Hijo>
@@ -42,6 +43,7 @@ class AssignedSonsActivity : AppCompatActivity() {
     }
 
 
+    //Funcion para obtener la informacion de los hijos por medio de la base de datos.
     private fun loadHijosInscritos() {
         db.collection("clases").document(nombreClase).get()
             .addOnSuccessListener { documentSnapshot ->

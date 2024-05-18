@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+
+//Adaptador para mostrar la informacion de los hijos en las clases
 class AssignedSonsAdapter(private val sonsList: List<Hijo>) : RecyclerView.Adapter<AssignedSonsAdapter.MyViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AssignedSonsAdapter.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.assigned_son, parent, false)

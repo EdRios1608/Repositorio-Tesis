@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
+//Adaptador que muestra la informacion de los usuarios con rango 1
 class ViewAdminAdapter(private val adminList: ArrayList<User>, private val context: Context) : RecyclerView.Adapter<ViewAdminAdapter.MyViewHolder> (){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewAdminAdapter.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.admin_item, parent, false)
@@ -28,8 +29,6 @@ class ViewAdminAdapter(private val adminList: ArrayList<User>, private val conte
             intent.putExtra("adminEmail", admin.email)
             context.startActivity(intent)
         }
-
-
     }
 
     override fun getItemCount(): Int {

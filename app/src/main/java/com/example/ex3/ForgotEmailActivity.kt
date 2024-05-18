@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.google.firebase.Firebase
 import com.google.firebase.auth.*
 
+//Actividad que ayuda a restablecer la clave del usuario.
 class ForgotEmailActivity : AppCompatActivity() {
     private lateinit var firebaseAuth : FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
